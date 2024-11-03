@@ -1,0 +1,260 @@
+/* Reset y variables */
+:root {
+    --player-bg: #f8f9fa;
+    --player-control: #4CAF50;
+    --player-progress: #81C784;
+}
+
+/* Breadcrumb */
+.breadcrumb {
+    background-color: var(--color-background);
+    padding: 1rem 0;
+    margin-bottom: 2rem;
+}
+
+.breadcrumb .container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.breadcrumb a {
+    color: var(--color-primary);
+    text-decoration: none;
+}
+
+/* Sección de introducción */
+.intro-section {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    padding: 4rem 0;
+    margin-bottom: 3rem;
+}
+
+.intro-section h1 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.intro-text {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 800px;
+}
+
+/* Reproductor principal */
+.podcast-player-section {
+    padding: 3rem 0;
+    background-color: white;
+}
+
+.episode-featured {
+    margin-bottom: 4rem;
+}
+
+.podcast-player {
+    background: var(--player-bg);
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+}
+
+.player-header {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+}
+
+.episode-cover {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.episode-info {
+    flex: 1;
+}
+
+.episode-info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.episode-meta {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Reproductor de audio personalizado */
+.audio-player {
+    width: 100%;
+    margin: 1.5rem 0;
+    height: 50px;
+    border-radius: 25px;
+}
+
+/* Episodios anteriores */
+.episodes-list {
+    margin-top: 4rem;
+}
+
+.episode-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.episode-card {
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.episode-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.episode-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.episode-card-content {
+    padding: 1.5rem;
+}
+
+.episode-card-content h4 {
+    color: var(--color-text);
+    margin-bottom: 0.5rem;
+}
+
+/* Botones */
+.play-btn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+    margin-top: 1rem;
+}
+
+.play-btn:hover {
+    background: var(--color-secondary);
+}
+
+/* Recursos adicionales */
+.resources-section {
+    background: var(--color-background);
+    padding: 4rem 0;
+    margin-top: 3rem;
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.resource-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.resource-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Sección de comentarios */
+.comments-section {
+    padding: 4rem 0;
+    background: white;
+}
+
+.comment-form {
+    background: var(--color-background);
+    padding: 2rem;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.submit-btn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--color-secondary);
+}
+
+/* Contenedor general */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .player-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .episode-cover {
+        width: 150px;
+        height: 150px;
+    }
+
+    .podcast-player {
+        padding: 1rem;
+    }
+
+    .intro-section h1 {
+        font-size: 2rem;
+    }
+
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+} 

@@ -1,0 +1,364 @@
+/* Estilos para la página de recursos */
+:root {
+    --card-bg: #ffffff;
+    --card-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    --card-radius: 12px;
+    --transition-speed: 0.3s;
+}
+
+/* Sección de introducción */
+.intro-section {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    padding: 4rem 0;
+    text-align: center;
+}
+
+.intro-text {
+    max-width: 800px;
+    margin: 1.5rem auto;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+/* Sección de herramientas */
+.tools-section {
+    padding: 4rem 0;
+    background: var(--color-background);
+}
+
+.tools-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+    align-items: start;
+}
+
+.tool-card {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background: var(--card-bg);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    overflow: hidden;
+    transition: transform var(--transition-speed) ease;
+}
+
+.tool-card:hover {
+    transform: translateY(-5px);
+}
+
+.tool-header {
+    padding: 1.5rem;
+    background: var(--color-primary);
+    color: white;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.tool-header img {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+}
+
+.tool-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 1.5rem;
+}
+
+.features-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.features-list li {
+    padding: 0.5rem 0;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.features-list li::before {
+    content: "✓";
+    color: var(--color-primary);
+}
+
+.tool-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 1.5rem;
+}
+
+.tutorial-btn, .visit-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    text-decoration: none;
+    transition: background var(--transition-speed) ease;
+    flex: 1;
+    text-align: center;
+}
+
+.tutorial-btn {
+    background: var(--color-primary);
+    color: white;
+}
+
+.visit-btn {
+    background: var(--color-background);
+    color: var(--color-primary);
+    border: 1px solid var(--color-primary);
+}
+
+/* Tips y mejores prácticas */
+.tips-section {
+    padding: 4rem 0;
+    background: white;
+}
+
+.tips-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.tip-card {
+    background: var(--color-background);
+    padding: 2rem;
+    border-radius: var(--card-radius);
+    text-align: center;
+}
+
+.tip-icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.tip-list {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.tip-list li {
+    padding: 0.5rem 0;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+}
+
+/* Recursos adicionales */
+.additional-resources {
+    padding: 4rem 0;
+    background: var(--color-background);
+}
+
+.resources-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.resource-card {
+    background: white;
+    padding: 2rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.resource-card h3 {
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+}
+
+.resource-card ul {
+    list-style: none;
+    padding: 0;
+}
+
+.resource-card a {
+    color: var(--color-text);
+    text-decoration: none;
+    padding: 0.5rem 0;
+    display: block;
+    transition: color var(--transition-speed) ease;
+}
+
+.resource-card a:hover {
+    color: var(--color-primary);
+}
+
+/* Media queries */
+@media (max-width: 768px) {
+    .tools-grid,
+    .tips-grid,
+    .resources-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .tool-links {
+        flex-direction: column;
+    }
+}
+
+/* Estilos para el modal de video */
+.video-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 1000;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.video-modal.active {
+    display: flex;
+    opacity: 1;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    position: relative;
+    width: 90%;
+    max-width: 1000px;
+    margin: auto;
+    background: transparent;
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 56.25%;
+    background: #000;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+.close-modal {
+    position: absolute;
+    top: -40px;
+    right: -40px;
+    width: 36px;
+    height: 36px;
+    background: white;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+    padding: 0;
+    z-index: 1001;
+    transition: all 0.3s ease;
+}
+
+.close-modal:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: rotate(90deg);
+}
+
+@media (max-width: 768px) {
+    .close-modal {
+        right: 0;
+        top: -40px;
+    }
+}
+
+/* Animaciones mejoradas */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95) translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+@keyframes modalFadeOut {
+    to {
+        opacity: 0;
+        transform: scale(0.95) translateY(20px);
+    }
+}
+
+.modal-content {
+    animation: modalFadeIn 0.4s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+.modal-content.closing {
+    animation: modalFadeOut 0.3s cubic-bezier(0.165, 0.84, 0.44, 1) forwards;
+}
+
+/* Media queries mejorados */
+@media (max-width: 1200px) {
+    .modal-content {
+        width: 90%;
+    }
+    
+    .close-modal {
+        right: 0;
+        top: -40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tools-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .video-modal {
+        padding: 1rem;
+    }
+}
+
+/* Mejoras en la accesibilidad */
+.tutorial-btn:focus,
+.close-modal:focus {
+    outline: 2px solid var(--color-primary);
+    outline-offset: 2px;
+}
+
+/* Indicador de carga para el video */
+.video-container::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 48px;
+    height: 48px;
+    border: 3px solid rgba(255,255,255,0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s linear infinite;
+    z-index: 0;
+}
+
+@keyframes spin {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+} 

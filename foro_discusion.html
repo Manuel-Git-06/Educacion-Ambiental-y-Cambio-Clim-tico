@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Foro de Discusión - Educación Ambiental</title>
+    <link rel="stylesheet" href="css_site_educacion_ambiental.css">
+    <link rel="stylesheet" href="css_foro.css">
+    <link rel="icon" href="planeta_tierra.ico">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Inicio</a> >
+            <span>Foro de Discusión</span>
+        </div>
+    </div>
+
+    <main class="foro-content">
+        <!-- Encabezado del Foro -->
+        <section class="foro-header">
+            <div class="container">
+                <h1>Foro de Discusión</h1>
+                <p class="foro-description">
+                    Espacio colaborativo para compartir ideas, resolver dudas y discutir temas 
+                    relacionados con la educación ambiental y la innovación tecnológica.
+                </p>
+                <button class="new-topic-btn" id="newTopicBtn">
+                    <i class="plus-icon">+</i> Crear Nuevo Tema
+                </button>
+            </div>
+        </section>
+
+        <!-- Categorías y Discusiones -->
+        <section class="foro-main">
+            <div class="container foro-grid">
+                <!-- Sidebar con Categorías -->
+                <aside class="categories-sidebar">
+                    <h2>Categorías</h2>
+                    <ul class="categories-list">
+                        <li class="active">
+                            <a href="#" data-category="todos">
+                                Todos los Temas
+                                <span class="topic-count">24</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-category="educacion-ambiental">
+                                Educación Ambiental
+                                <span class="topic-count">8</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-category="innovacion">
+                                Innovación Tecnológica
+                                <span class="topic-count">6</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-category="retos">
+                                Retos en Educación Virtual
+                                <span class="topic-count">5</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-category="proyectos">
+                                Proyectos Colaborativos
+                                <span class="topic-count">3</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#" data-category="recursos">
+                                Recursos Educativos
+                                <span class="topic-count">2</span>
+                            </a>
+                        </li>
+                    </ul>
+                </aside>
+
+                <!-- Lista de Discusiones -->
+                <div class="discussions-container">
+                    <div class="discussions-header">
+                        <h2>Discusiones Recientes</h2>
+                        <div class="discussions-filters">
+                            <select class="filter-select" title="Filtrar por">
+                                <option value="recientes">Más Recientes</option>
+                                <option value="populares">Más Populares</option>
+                                <option value="respondidos">Respondidos</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="discussions-list">
+                        <!-- Tema de Discusión -->
+                        <article class="discussion-card">
+                            <div class="discussion-stats">
+                                <div class="stat">
+                                    <span class="number">15</span>
+                                    <span class="label">Respuestas</span>
+                                </div>
+                                <div class="stat">
+                                    <span class="number">42</span>
+                                    <span class="label">Vistas</span>
+                                </div>
+                            </div>
+                            <div class="discussion-content">
+                                <h3>
+                                    <a href="#" class="discussion-title">
+                                        Estrategias efectivas para la educación ambiental en línea
+                                    </a>
+                                </h3>
+                                <div class="discussion-meta">
+                                    <span class="category-tag">Educación Ambiental</span>
+                                    <span class="author">Por: María García</span>
+                                    <span class="date">Hace 2 días</span>
+                                </div>
+                                <p class="discussion-excerpt">
+                                    ¿Qué herramientas y métodos han encontrado más efectivos para 
+                                    enseñar sobre medio ambiente en entornos virtuales?
+                                </p>
+                            </div>
+                            <div class="discussion-status">
+                                <span class="status-badge active">Activo</span>
+                            </div>
+                        </article>
+
+                        <!-- Más temas de discusión... -->
+                    </div>
+
+                    <!-- Paginación -->
+                    <div class="pagination">
+                        <button class="page-btn prev" disabled>Anterior</button>
+                        <div class="page-numbers">
+                            <button class="page-btn active">1</button>
+                            <button class="page-btn">2</button>
+                            <button class="page-btn">3</button>
+                            <span class="ellipsis">...</span>
+                            <button class="page-btn">8</button>
+                        </div>
+                        <button class="page-btn next">Siguiente</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para Nuevo Tema -->
+    <div class="modal" id="newTopicModal">
+        <div class="modal-content">
+            <button class="close-modal">&times;</button>
+            <h2>Crear Nuevo Tema</h2>
+            <form id="newTopicForm">
+                <div class="form-group">
+                    <label for="topicTitle">Título</label>
+                    <input type="text" id="topicTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="topicCategory">Categoría</label>
+                    <select id="topicCategory" required>
+                        <option value="">Selecciona una categoría</option>
+                        <option value="educacion-ambiental">Educación Ambiental</option>
+                        <option value="innovacion">Innovación Tecnológica</option>
+                        <option value="retos">Retos en Educación Virtual</option>
+                        <option value="proyectos">Proyectos Colaborativos</option>
+                        <option value="recursos">Recursos Educativos</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="topicContent">Contenido</label>
+                    <textarea id="topicContent" rows="6" required></textarea>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Publicar Tema</button>
+                    <button type="button" class="cancel-btn">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js_foro.js"></script>
+</body>
+</html> 

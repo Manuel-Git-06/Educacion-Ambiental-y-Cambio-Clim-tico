@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Podcast Educativo - Educación Ambiental</title>
+    <link rel="stylesheet" href="css_site_educacion_ambiental.css">
+    <link rel="stylesheet" href="css_podcast.css"> 
+    <link rel="icon" href="planeta_tierra.ico">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Inicio</a> >
+            <span>Podcast Educativo</span>
+        </div>
+    </div>
+
+    <main class="podcast-content">
+        <!-- Sección de Introducción -->
+        <section class="intro-section">
+            <div class="container">
+                <h1>Podcast: Revisiones de Ofertas Académicas en Entornos Virtuales</h1>
+                <p class="intro-text">
+                    Bienvenido a nuestro podcast educativo, donde exploramos diferentes aspectos 
+                    de la educación ambiental y analizamos las mejores ofertas académicas disponibles 
+                    en entornos virtuales. Cada episodio está diseñado para mantenerte informado 
+                    sobre las últimas tendencias en educación ambiental en línea, ponte comodo y disfruta!!!.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección del Reproductor de Podcast -->
+        <section class="podcast-player-section">
+            <div class="container">
+                <div class="episode-featured">
+                    <h2>Último Episodio</h2>
+                    <div class="podcast-player">
+                        <div class="player-header">
+                            <img src="imagen_podcast.webp" alt="Portada del episodio" class="episode-cover">
+                            <div class="episode-info">
+                                <h3>Episodio 11: El Cambio Climático y la Educación Ambiental</h3>
+                                <p class="episode-meta">Fecha: 03 de Noviembre, 2024 | Duración: 45:30</p>
+                            </div>
+                        </div>
+                        <audio controls class="audio-player">
+                            <source src="path/to/podcast-episode.mp3" type="audio/mpeg">
+                            Tu navegador no soporta el elemento de audio.
+                        </audio>
+                        <div class="episode-description">
+                            <p>
+                                En este episodio, exploramos el impacto del cambio climático en la educación ambiental, 
+                                y cómo las plataformas virtuales pueden contribuir a la educación ambiental.
+                            </p>
+                        </div>
+                        <div class="episode-tags">
+                            <span class="tag">Educación Virtual</span>
+                            <span class="tag">Medio Ambiente</span>
+                            <span class="tag">E-learning</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Lista de Episodios Anteriores -->
+                <div class="episodes-list">
+                    <h2>Episodios Anteriores</h2>
+                    <div class="episode-grid">
+                        <!-- Episodio -->
+                        <div class="episode-card">
+                            <img src="imagen_plataformas_virtuales.webp" alt="Portada episodio 2">
+                            <div class="episode-card-content">
+                                <h4>Episodio 10: Plataformas de Aprendizaje Ambiental</h4>
+                                <p>Duración: 38:45</p>
+                                <button class="play-btn">Reproducir</button>
+                            </div>
+                        </div>
+                        <!-- Más episodios... -->
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Comentarios -->
+        <section class="comments-section">
+            <div class="container">
+                <h2>Comentarios y Sugerencias</h2>
+                <div class="comment-form">
+                    <form id="commentForm">
+                        <div class="form-group">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Tu comentario:</label>
+                            <textarea id="comment" name="comment" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Comentario</button>
+                    </form>
+                </div>
+                <div class="comments-list">
+                    <!-- Los comentarios se cargarán dinámicamente aquí -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <p>&copy; 2024. Sitio colaborativo de Educación Ambiental e Innovación en Entornos Virtuales.</p>
+        <small>Desde Equipo Cambio Verde con 💚 para el mundo</small>
+    </footer>
+
+    <script src="js_podcast.js"></script>
+</body>
+</html> 

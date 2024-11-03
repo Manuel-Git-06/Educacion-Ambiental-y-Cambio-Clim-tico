@@ -1,0 +1,337 @@
+/* Variables específicas del foro */
+:root {
+    --foro-bg: #f8f9fa;
+    --card-bg: #ffffff;
+    --border-color: #e0e0e0;
+    --badge-color: #4CAF50;
+    --text-muted: #6c757d;
+}
+
+/* Estilos del Foro */
+.foro-header {
+    background: linear-gradient(135deg, var(--color-primary), var(--color-secondary));
+    color: white;
+    padding: 3rem;
+    margin-bottom: 2rem;
+}
+
+.foro-description {
+    max-width: 800px;
+    margin: 1rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.new-topic-btn {
+    background: white;
+    color: var(--color-primary);
+    border: none;
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.new-topic-btn:hover {
+    background: var(--color-primary);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Grid del Foro */
+.foro-grid {
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+/* Sidebar de Categorías */
+.categories-sidebar {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.categories-list {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+}
+
+.categories-list li {
+    margin-bottom: 0.5rem;
+}
+
+.categories-list a {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.8rem;
+    color: var(--color-text);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.categories-list a:hover,
+.categories-list li.active a {
+    background: var(--color-primary);
+    color: white;
+}
+
+.topic-count {
+    background: rgba(0,0,0,0.1);
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.9rem;
+}
+
+/* Contenedor de Discusiones */
+.discussions-container {
+    background: var(--card-bg);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+}
+
+.discussions-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.filter-select {
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 0.9rem;
+}
+
+/* Tarjetas de Discusión */
+.discussion-card {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    gap: 1.5rem;
+    padding: 1.5rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.3s ease;
+}
+
+.discussion-card:hover {
+    background-color: var(--foro-bg);
+}
+
+.discussion-stats {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.stat {
+    text-align: center;
+}
+
+.number {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: var(--color-primary);
+}
+
+.label {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.discussion-content {
+    flex: 1;
+}
+
+.discussion-title {
+    color: var(--color-text);
+    text-decoration: none;
+    font-size: 1.1rem;
+    margin-bottom: 0.5rem;
+    display: block;
+}
+
+.discussion-meta {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.category-tag {
+    background: var(--color-primary);
+    color: white;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+}
+
+.discussion-excerpt {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-top: 0.5rem;
+}
+
+.status-badge {
+    padding: 0.3rem 0.8rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    background: #e8f5e9;
+    color: var(--badge-color);
+}
+
+/* Paginación */
+.pagination {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+    gap: 0.5rem;
+}
+
+.page-btn {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--border-color);
+    background: white;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.page-btn.active,
+.page-btn:hover:not([disabled]) {
+    background: var(--color-primary);
+    color: white;
+    border-color: var(--color-primary);
+}
+
+.page-btn[disabled] {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Modal */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1000;
+}
+
+.modal.active {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    width: 90%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close-modal {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--text-muted);
+}
+
+/* Formulario */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+}
+
+.form-actions {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    margin-top: 2rem;
+}
+
+.submit-btn,
+.cancel-btn {
+    padding: 0.8rem 1.5rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.submit-btn {
+    background: var(--color-primary);
+    color: white;
+    border: none;
+}
+
+.cancel-btn {
+    background: white;
+    border: 1px solid var(--border-color);
+}
+
+/* Media queries */
+@media (max-width: 968px) {
+    .foro-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .categories-sidebar {
+        margin-bottom: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .discussion-card {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .discussion-stats {
+        flex-direction: row;
+        justify-content: start;
+    }
+
+    .pagination {
+        flex-wrap: wrap;
+    }
+} 

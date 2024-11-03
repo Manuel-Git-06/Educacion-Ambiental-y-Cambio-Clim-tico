@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto - Educación Ambiental</title>
+    <link rel="stylesheet" href="css_site_educacion_ambiental.css">
+    <link rel="stylesheet" href="css_contacto.css">
+    <link rel="icon" href="planeta_tierra.ico">
+</head>
+<body>
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Inicio</a> >
+            <span>Contacto</span>
+        </div>
+    </div>
+
+    <main class="contacto-content">
+        <!-- Sección de Contacto -->
+        <section class="contact-section">
+            <div class="container">
+                <div class="contact-grid">
+                    <!-- Información de Contacto -->
+                    <div class="contact-info">
+                        <h1>Contáctanos</h1>
+                        <p class="contact-description">
+                            ¿Tienes preguntas o quieres unirte a nuestra comunidad? 
+                            Estamos aquí para ayudarte.
+                        </p>
+                        
+                        <div class="contact-methods">
+                            <div class="contact-method">
+                                <i class="method-icon">📧</i>
+                                <div class="method-details">
+                                    <h3>Email</h3>
+                                    <p>info@educacionambiental.com</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <i class="method-icon">📱</i>
+                                <div class="method-details">
+                                    <h3>Teléfono</h3>
+                                    <p>+823 456 789</p>
+                                </div>
+                            </div>
+                            
+                            <div class="contact-method">
+                                <i class="method-icon">🌍</i>
+                                <div class="method-details">
+                                    <h3>Redes Sociales</h3>
+                                    <div class="social-links">
+                                        <a href="#" class="social-link" title="Facebook">
+                                            <img src="images/icons/facebook.svg" alt="Facebook">
+                                        </a>
+                                        <a href="#" class="social-link" title="Twitter">
+                                            <img src="images/icons/twitter.svg" alt="Twitter">
+                                        </a>
+                                        <a href="#" class="social-link" title="LinkedIn">
+                                            <img src="images/icons/linkedin.svg" alt="LinkedIn">
+                                        </a>
+                                        <a href="#" class="social-link" title="Instagram">
+                                            <img src="images/icons/instagram.svg" alt="Instagram">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Formulario de Contacto -->
+                    <div class="contact-form-container">
+                        <form id="contactForm" class="contact-form">
+                            <div class="form-header">
+                                <h2>Envíanos un mensaje</h2>
+                                <p>Todos los campos marcados con * son obligatorios</p>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo *</label>
+                                <input type="text" 
+                                       id="nombre" 
+                                       name="nombre" 
+                                       required 
+                                       placeholder="Tu nombre">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="email">Correo electrónico *</label>
+                                <input type="email" 
+                                       id="email" 
+                                       name="email" 
+                                       required 
+                                       placeholder="tu@email.com">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="asunto">Asunto *</label>
+                                <select id="asunto" name="asunto" required>
+                                    <option value="">Selecciona un asunto</option>
+                                    <option value="colaboracion">Colaboración</option>
+                                    <option value="consulta">Consulta</option>
+                                    <option value="sugerencia">Sugerencia</option>
+                                    <option value="otro">Otro</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="mensaje">Mensaje *</label>
+                                <textarea id="mensaje" 
+                                          name="mensaje" 
+                                          required 
+                                          placeholder="Escribe tu mensaje aquí..."
+                                          rows="5"></textarea>
+                            </div>
+
+                            <div class="form-group checkbox-group">
+                                <input type="checkbox" 
+                                       id="privacidad" 
+                                       name="privacidad" 
+                                       required>
+                                <label for="privacidad">
+                                    Acepto la política de privacidad y el tratamiento de datos *
+                                </label>
+                            </div>
+
+                            <div class="form-actions">
+                                <button type="submit" class="submit-btn">
+                                    Enviar mensaje
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Mensaje de Éxito Modal -->
+        <div class="success-modal" id="successModal">
+            <div class="modal-content">
+                <div class="success-icon">✓</div>
+                <h3>¡Mensaje enviado!</h3>
+                <p>Gracias por contactarnos. Te responderemos lo antes posible.</p>
+                <button class="close-modal">Cerrar</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="js_contacto.js"></script>
+</body>
+</html> 

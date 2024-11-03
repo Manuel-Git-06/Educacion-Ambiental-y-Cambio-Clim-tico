@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos Educativos - Educación Ambiental</title>
+    <link rel="stylesheet" href="css_site_educacion_ambiental.css">
+    <link rel="stylesheet" href="css_videos.css">
+    <link rel="icon" href="planeta_tierra.ico">
+</head>
+<body>
+    <!-- Breadcrumb Navigation -->
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Inicio</a> >
+            <span>Videos Educativos</span>
+        </div>
+    </div>
+
+    <main class="video-content">
+        <!-- Sección de Introducción -->
+        <section class="intro-section">
+            <div class="container">
+                <h1>Videos Educativos sobre Temas Ambientales</h1>
+                <p class="intro-text">
+                    Bienvenido a nuestra sección de videos educativos, donde encontrarás contenido seleccionado 
+                    sobre cambio climático, sostenibilidad y conservación ambiental. Estos recursos audiovisuales 
+                    están diseñados para proporcionar información clara y actualizada sobre los desafíos 
+                    ambientales más importantes de nuestro tiempo.
+                </p>
+            </div>
+        </section>
+
+        <!-- Sección del Video -->
+        <section class="video-section">
+            <div class="container">
+                <div class="video-wrapper">
+                    <iframe 
+                        src="https://www.youtube.com/embed/VIDEO_ID" 
+                        title="Video Educativo sobre Cambio Climático"
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen>
+                    </iframe>
+                </div>
+                
+                <div class="video-description">
+                    <h2>Título del Video</h2>
+                    <p class="video-info">
+                        Este video explora los conceptos fundamentales del cambio climático y sus efectos 
+                        en nuestro planeta. A través de animaciones y explicaciones claras, comprenderemos 
+                        mejor este fenómeno global y aprenderemos sobre las acciones que podemos tomar 
+                        para mitigar sus efectos.
+                    </p>
+                    <div class="video-tags">
+                        <span class="tag">Cambio Climático</span>
+                        <span class="tag">Educación Ambiental</span>
+                        <span class="tag">Sostenibilidad</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Comentarios -->
+        <section class="comments-section">
+            <div class="container">
+                <h2>Comentarios y Sugerencias</h2>
+                <div class="comment-form">
+                    <form id="commentForm">
+                        <div class="form-group">
+                            <label for="name">Nombre:</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Correo electrónico:</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="comment">Tu comentario:</label>
+                            <textarea id="comment" name="comment" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Enviar Comentario</button>
+                    </form>
+                </div>
+
+                <div class="comments-list">
+                    <!-- Los comentarios se cargarán dinámicamente aquí -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <p>&copy; 2024. Sitio colaborativo de Educación Ambiental e Innovación en Entornos Virtuales.</p>
+        <small>Desde Equipo Cambio Verde con 💚 para el mundo</small>
+    </footer>
+
+    <script src="js_videos.js"></script>
+</body>
+</html> 

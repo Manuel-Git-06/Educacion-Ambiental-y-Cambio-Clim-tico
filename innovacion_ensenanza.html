@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Innovación en Enseñanza Ambiental</title>
+    <link rel="stylesheet" href="css_site_educacion_ambiental.css">
+    <link rel="stylesheet" href="css_innovacion.css">
+    <link rel="icon" href="planeta_tierra.ico">
+</head>
+<body>
+    <div class="breadcrumb">
+        <div class="container">
+            <a href="index.html">Inicio</a> >
+            <span>Innovación en Enseñanza</span>
+        </div>
+    </div>
+
+    <main class="innovacion-content">
+        <!-- Sección de Cabecera -->
+        <section class="hero-section">
+            <div class="container">
+                <h1>Innovación en la Enseñanza de Ciencias Ambientales</h1>
+                <p class="hero-description">
+                    Explora metodologías innovadoras y proyectos exitosos en la 
+                    enseñanza de ciencias ambientales. Aprende de experiencias 
+                    reales y recursos probados.
+                </p>
+            </div>
+        </section>
+
+        <!-- Filtros y Búsqueda -->
+        <section class="filters-section">
+            <div class="container">
+                <div class="filters-container">
+                    <div class="search-box">
+                        <input type="text" placeholder="Buscar artículos o proyectos...">
+                        <button class="search-btn">
+                            <i class="search-icon">🔍</i>
+                        </button>
+                    </div>
+                    <div class="filter-options">
+                        <select class="filter-select">
+                            <option value="">Todas las categorías</option>
+                            <option value="metodologias">Metodologías</option>
+                            <option value="tecnologia">Tecnología</option>
+                            <option value="proyectos">Proyectos</option>
+                        </select>
+                        <select class="filter-select">
+                            <option value="">Ordenar por</option>
+                            <option value="recent">Más recientes</option>
+                            <option value="popular">Más populares</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Artículos Destacados -->
+        <section class="featured-articles">
+            <div class="container">
+                <h2>Artículos Destacados</h2>
+                <div class="articles-grid">
+                    <!-- Artículo Principal -->
+                    <article class="article-card featured">
+                        <div class="article-image">
+                            <img src="https://www.tecnologia-ciencia-educacion.com/public/journals/2/cover_issue_230_es_ES.jpg" 
+                                 alt="Realidad Virtual en Educación"
+                                 loading="lazy">
+                            <div class="article-category">Tecnología Educativa</div>
+                        </div>
+                        <div class="article-content">
+                            <div class="article-meta">
+                                <span class="author">
+                                    <img src="https://www.tecnologia-ciencia-educacion.com/public/journals/2/pageHeaderLogoImage_es_ES.png" alt="Autor">
+                                    Julio Cabero-Almenara, Rubicelia Valencia-Ortiz, Carmen Llorente-Cejudo
+                                </span>
+                                <span class="date">05-09-2022</span>
+                            </div>
+                            <h3>Realidad Virtual en la Enseñanza de Ecosistemas</h3>
+                            <p>
+                                Descubre cómo la realidad virtual está transformando 
+                                la manera en que los estudiantes aprenden sobre los 
+                                ecosistemas y su conservación...
+                            </p>
+                            <div class="article-tags">
+                                <span class="tag">Realidad Virtual</span>
+                                <span class="tag">Ecosistemas</span>
+                                <span class="tag">Innovación</span>
+                            </div>
+                            <a href="https://www.tecnologia-ciencia-educacion.com/index.php/TCE/issue/view/230" class="read-more">Leer artículo completo</a>
+                        </div>
+                    </article>
+
+                    <!-- Artículos Secundarios -->
+                    <article class="article-card">
+                        <!-- Estructura similar pero más compacta -->
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- Proyectos Innovadores -->
+        <section class="projects-section">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Proyectos Innovadores</h2>
+                    <button class="add-project-btn" id="addProjectBtn">
+                        Compartir Proyecto
+                    </button>
+                </div>
+                <div class="projects-grid">
+                    <!-- Proyecto Card -->
+                    <div class="project-card">
+                        <div class="project-header">
+                            <img src="image_proyecto_curso.png" 
+                                 alt="curso educacion ambiental"
+                                 loading="lazy">
+                            <div class="project-status active">En Curso</div>
+                        </div>
+                        <div class="project-content">
+                            <h3>curso de educacion ambiental virtual</h3>
+                            <p>
+                                Este es un curso de educacion ambiental virtual diseñado para que los estudiantes puedan aprender a su propio ritmo y por si mismos. 
+                            </p>
+                            <div class="project-details">
+                                <div class="detail-item">
+                                    <i class="icon">👥</i>
+                                    <span>150 estudiantes</span>
+                                </div>
+                                <div class="detail-item">
+                                    <i class="icon">⏱️</i>
+                                    <span>Una semana</span>
+                                </div>
+                            </div>
+                            <div class="project-tools">
+                                <h4>Herramientas utilizadas</h4>
+                                <div class="tools-list">
+                                    <span class="tool">Unity 3D</span>
+                                    <span class="tool">Base de datos</span>
+                                    <span class="tool">Modelos 3D</span>
+                                </div>
+                            </div>
+                            <a href="https://manuel-git-06.github.io/Curso-Conservacion-de-Ecosistemas/" class="view-project">Ver detalles</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Modal para Nuevo Proyecto -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <button class="close-modal" aria-label="Cerrar">&times;</button>
+            <h2>Compartir Proyecto Innovador</h2>
+            <form id="projectForm" class="project-form">
+                <div class="form-group">
+                    <label for="projectTitle">Título del Proyecto</label>
+                    <input type="text" id="projectTitle" required>
+                </div>
+                <div class="form-group">
+                    <label for="projectDescription">Descripción</label>
+                    <textarea id="projectDescription" rows="4" required></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="projectTools">Herramientas Utilizadas</label>
+                    <input type="text" id="projectTools" 
+                           placeholder="Separar con comas">
+                </div>
+                <div class="form-group">
+                    <label for="projectImage">Imagen del Proyecto</label>
+                    <input type="file" id="projectImage" 
+                           accept="image/*"
+                           class="file-input">
+                    <div class="image-preview" id="imagePreview"></div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" class="submit-btn">Publicar</button>
+                    <button type="button" class="cancel-btn">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script src="js_innovacion.js"></script>
+</body>
+</html> 

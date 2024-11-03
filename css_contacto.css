@@ -1,0 +1,234 @@
+:root {
+    --form-bg: #ffffff;
+    --input-bg: #f8f9fa;
+    --input-border: #e0e0e0;
+    --input-focus: var(--color-primary);
+}
+
+/* Contact Grid */
+.contact-grid {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr;
+    gap: 4rem;
+    margin: 4rem 0;
+}
+
+/* Contact Info */
+.contact-info {
+    padding: 2rem;
+}
+
+.contact-description {
+    margin: 1.5rem 0;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: var(--text-muted);
+}
+
+.contact-methods {
+    margin-top: 3rem;
+}
+
+.contact-method {
+    display: flex;
+    align-items: flex-start;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.method-icon {
+    font-size: 2rem;
+    background: var(--color-background);
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+}
+
+.method-details h3 {
+    margin-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+    margin-top: 0.5rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--input-bg);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+
+.social-link:hover {
+    background: var(--color-primary);
+}
+
+.social-link img {
+    width: 20px;
+    height: 20px;
+    transition: filter 0.3s ease;
+}
+
+.social-link:hover img {
+    filter: brightness(0) invert(1);
+}
+
+/* Contact Form */
+.contact-form-container {
+    background: var(--form-bg);
+    padding: 3rem;
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+}
+
+.form-header {
+    margin-bottom: 2rem;
+}
+
+.form-header p {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    margin-top: 0.5rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 1rem;
+    border: 1px solid var(--input-border);
+    border-radius: 8px;
+    background: var(--input-bg);
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group select:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--input-focus);
+    box-shadow: 0 0 0 3px rgba(var(--color-primary-rgb), 0.1);
+}
+
+.checkbox-group {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.5rem;
+}
+
+.checkbox-group input[type="checkbox"] {
+    width: auto;
+    margin-top: 0.3rem;
+}
+
+.checkbox-group label {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.submit-btn {
+    width: 100%;
+    padding: 1rem;
+    background: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.submit-btn:hover {
+    background: var(--color-secondary);
+    transform: translateY(-2px);
+}
+
+/* Success Modal */
+.success-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.success-modal .modal-content {
+    background: white;
+    padding: 3rem;
+    border-radius: var(--card-radius);
+    text-align: center;
+    transform: translateY(20px);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.success-modal.active .modal-content {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.success-icon {
+    width: 60px;
+    height: 60px;
+    background: var(--color-primary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 0 auto 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .contact-form-container {
+        padding: 2rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .contact-method {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .method-icon {
+        width: 50px;
+        height: 50px;
+        font-size: 1.5rem;
+    }
+} 
