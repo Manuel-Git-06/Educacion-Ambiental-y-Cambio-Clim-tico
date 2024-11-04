@@ -92,4 +92,70 @@ document.addEventListener('DOMContentLoaded', function() {
     cards.forEach(card => {
         cardObserver.observe(card);
     });
+
+    const filterSelect = document.getElementById('filterSelect');
+    
+    filterSelect.addEventListener('change', function() {
+        const selectedValue = this.value;
+        
+        // Aquí puedes añadir la lógica de filtrado
+        if(selectedValue) {
+            console.log(`Filtrando por: ${selectedValue}`);
+            // Implementar la lógica de filtrado
+            filterContent(selectedValue);
+        }
+    });
+
+    function filterContent(filter) {
+        const articles = document.querySelectorAll('.article-card');
+        
+        articles.forEach(article => {
+            if(filter === '') {
+                article.style.display = 'block';
+            } else {
+                if(article.dataset.category === filter) {
+                    article.style.display = 'block';
+                } else {
+                    article.style.display = 'none';
+                }
+            }
+        });
+    }
+
+    const sortSelect = document.getElementById('sortSelect');
+    
+    sortSelect.addEventListener('change', function() {
+        const selectedValue = this.value;
+        
+        if(selectedValue) {
+            sortContent(selectedValue);
+        }
+    });
+
+    function sortContent(sortBy) {
+        const container = document.querySelector('.articles-grid');
+        const articles = Array.from(container.querySelectorAll('.article-card'));
+
+        articles.sort((a, b) => {
+            switch(sortBy) {
+                case 'fecha-reciente':
+                    return new Date(b.dataset.fecha) - new Date(a.dataset.fecha);
+                case 'fecha-antigua':
+                    return new Date(a.dataset.fecha) - new Date(b.dataset.fecha);
+                case 'alfabetico-asc':
+                    return a.querySelector('h3').textContent.localeCompare(b.querySelector('h3').textContent);
+                case 'alfabetico-desc':
+                    return b.querySelector('h3').textContent.localeCompare(a.querySelector('h3').textContent);
+                case 'popularidad':
+                    return parseInt(b.dataset.vistas) - parseInt(a.dataset.vistas);
+                case 'valoracion':
+                    return parseFloat(b.dataset.valoracion) - parseFloat(a.dataset.valoracion);
+                default:
+                    return 0;
+            }
+        });
+
+        // Limpiar y reordenar
+        articles.forEach(article => container.appendChild(article));
+    }
 }); 

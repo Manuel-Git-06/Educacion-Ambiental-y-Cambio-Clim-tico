@@ -40,16 +40,23 @@
                         </button>
                     </div>
                     <div class="filter-options">
-                        <select class="filter-select">
-                            <option value="">Todas las categorías</option>
+                        <select class="filter-select" id="filterSelect" name="filter" aria-label="Filtrar contenido">
+                            <option value="">Seleccionar filtro</option>
+                            <option value="recientes">Más recientes</option>
+                            <option value="populares">Más populares</option>
+                            <option value="educacion-ambiental">Educación Ambiental</option>
+                            <option value="innovacion">Innovación Tecnológica</option>
                             <option value="metodologias">Metodologías</option>
-                            <option value="tecnologia">Tecnología</option>
                             <option value="proyectos">Proyectos</option>
                         </select>
-                        <select class="filter-select">
+                        <select class="filter-select" id="sortSelect" name="sort" aria-label="Ordenar contenido">
                             <option value="">Ordenar por</option>
-                            <option value="recent">Más recientes</option>
-                            <option value="popular">Más populares</option>
+                            <option value="fecha-reciente">Más recientes primero</option>
+                            <option value="fecha-antigua">Más antiguos primero</option>
+                            <option value="alfabetico-asc">A-Z</option>
+                            <option value="alfabetico-desc">Z-A</option>
+                            <option value="popularidad">Más populares</option>
+                            <option value="valoracion">Mejor valorados</option>
                         </select>
                     </div>
                 </div>
@@ -93,7 +100,7 @@
                     </article>
 
                     <!-- Artículos Secundarios -->
-                    <article class="article-card">
+                    <article class="article-card" data-category="educacion-ambiental">
                         <!-- Estructura similar pero más compacta -->
                     </article>
                 </div>
@@ -111,39 +118,112 @@
                 </div>
                 <div class="projects-grid">
                     <!-- Proyecto Card -->
-                    <div class="project-card">
+                    <article class="project-card">
+                        <!-- Imagen y Banner de Estado -->
                         <div class="project-header">
-                            <img src="image_proyecto_curso.png" 
-                                 alt="curso educacion ambiental"
-                                 loading="lazy">
-                            <div class="project-status active">En Curso</div>
+                            <div class="project-image-container">
+                                <img src="image_proyecto_curso.png" 
+                                     alt="Curso de Educación Ambiental Virtual"
+                                     loading="lazy"
+                                     class="project-image">
+                                <div class="project-overlay">
+                                    <a href="https://manuel-git-06.github.io/Curso-Conservacion-de-Ecosistemas/" 
+                                       class="project-link"
+                                       target="_blank"
+                                       rel="noopener noreferrer">
+                                        Explorar Curso
+                                        <i class="arrow-icon">→</i>
+                                    </a>
+                                </div>
+                            </div>
+                            <span class="project-badge active">
+                                <i class="status-icon">●</i>
+                                En Curso
+                            </span>
                         </div>
+
+                        <!-- Contenido del Proyecto -->
                         <div class="project-content">
-                            <h3>curso de educacion ambiental virtual</h3>
-                            <p>
-                                Este es un curso de educacion ambiental virtual diseñado para que los estudiantes puedan aprender a su propio ritmo y por si mismos. 
-                            </p>
-                            <div class="project-details">
-                                <div class="detail-item">
-                                    <i class="icon">👥</i>
-                                    <span>150 estudiantes</span>
+                            <header class="project-title">
+                                <h3>Curso de Educación Ambiental Virtual</h3>
+                                <div class="project-meta">
+                                    <span class="meta-item">
+                                        <i class="meta-icon">📅</i>
+                                        2024
+                                    </span>
+                                    <span class="meta-item">
+                                        <i class="meta-icon">🎯</i>
+                                        Educación Virtual
+                                    </span>
                                 </div>
-                                <div class="detail-item">
-                                    <i class="icon">⏱️</i>
-                                    <span>Una semana</span>
+                            </header>
+
+                            <div class="project-description">
+                                <p>
+                                    Plataforma interactiva de aprendizaje autodirigido sobre conservación 
+                                    ambiental. Los estudiantes pueden explorar contenidos multimedia, 
+                                    realizar actividades prácticas y evaluar su progreso.
+                                </p>
+                            </div>
+
+                            <!-- Estadísticas del Proyecto -->
+                            <div class="project-stats">
+                                <div class="stat-item">
+                                    <i class="stat-icon">👥</i>
+                                    <div class="stat-info">
+                                        <span class="stat-value">150+</span>
+                                        <span class="stat-label">Estudiantes</span>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="stat-icon">⏱️</i>
+                                    <div class="stat-info">
+                                        <span class="stat-value">7</span>
+                                        <span class="stat-label">Días</span>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <i class="stat-icon">📚</i>
+                                    <div class="stat-info">
+                                        <span class="stat-value">5</span>
+                                        <span class="stat-label">Módulos</span>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="project-tools">
-                                <h4>Herramientas utilizadas</h4>
-                                <div class="tools-list">
-                                    <span class="tool">Unity 3D</span>
-                                    <span class="tool">Base de datos</span>
-                                    <span class="tool">Modelos 3D</span>
+
+                            <!-- Tecnologías Utilizadas -->
+                            <div class="project-tech">
+                                <h4>Tecnologías</h4>
+                                <div class="tech-stack">
+                                    <span class="tech-item" title="Unity 3D">
+                                        <img src="https://logos-world.net/wp-content/uploads/2021/11/Unity-Emblem.png" alt="Unity 3D">
+                                        Unity 3D
+                                    </span>
+                                    <span class="tech-item" title="Base de Datos">
+                                        <img src="https://th.bing.com/th/id/OIP.IDZGIlL9zPcQsl8xdhX2KwHaEV?w=840&h=492&rs=1&pid=ImgDetMain" alt="Base de Datos">
+                                        SQL
+                                    </span>
+                                    <span class="tech-item" title="Modelado 3D">
+                                        <img src="https://th.bing.com/th/id/OIP.8mcnn1rPoOlJbKCv5bcDhQHaHa?w=3456&h=3456&rs=1&pid=ImgDetMain" alt="Modelado 3D">
+                                        3D
+                                    </span>
                                 </div>
                             </div>
-                            <a href="https://manuel-git-06.github.io/Curso-Conservacion-de-Ecosistemas/" class="view-project">Ver detalles</a>
+
+                            <!-- Botones de Acción -->
+                            <div class="project-actions">
+                                <a href="https://manuel-git-06.github.io/Curso-Conservacion-de-Ecosistemas/" 
+                                   class="action-btn primary"
+                                   target="_blank"
+                                   rel="noopener noreferrer">
+                                    Ver Curso
+                                </a>
+                                <button class="action-btn secondary" data-modal="project-details">
+                                    Más Información
+                                </button>
+                            </div>
                         </div>
-                    </div>
+                    </article>
                 </div>
             </div>
         </section>
